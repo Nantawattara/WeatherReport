@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather Information</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .card {
+            margin-bottom: 1rem;
+        }
+        .weather-icon {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div>
+            <h1>Weather Information</h1>
+            <div class="mb-3">
+                <label for="country" class="form-label">Country</label>
+                <select id="country" class="form-select">
+                  <option value="AF">Afghanistan - National Disaster Management Authority</option>
+                  <option value="AL">Albania - Institute of GeoSciences, Energy, Water and Environment</option>
+                  <option value="DZ">Algeria - National Meteorological Office</option>
+                  <option value="AI">Anguilla - Disaster Management Anguilla</option>
+                  <option value="AG">Antigua and Barbuda - Meteorological Services</option>
+                  <option value="AR">Argentina - Servicio Meteorologico Nacional</option>
+                  <option value="AW">Aruba - Meteorological Department of Aruba</option>
+                  <option value="AU">Australia - Bureau of Meteorology</option>
+                  <option value="AT">Austria - Central Institute for Meteorology and Geodynamics</option>
+                  <option value="AT">Austria - Water Balance Department</option>
+                  <option value="BB">Barbados - Department of Emergency Management</option>
+                  <option value="BE">Belgium - Royal Meteorological Institute</option>
+                  <option value="BA">Bosnia and Herzegovina - Federal Hydrometeorological Institute of BiH</option>
+                  <option value="BA">Bosnia and Herzegovina - Republic Hydrometeorological Institute</option>
+                  <option value="BW">Botswana - Department of Meteorological Services</option>
+                  <option value="BR">Brazil - National Meteorological Institute - INMET</option>
+                  <option value="BG">Bulgaria - National Institute of Meteorology and Hydrology - Plovdiv branch</option>
+                  <option value="CA">Canada - Alberta Emergency Management Agency</option>
+                  <option value="CA">Canada - Meteorological Service of Canada</option>
+                  <option value="CA">Canada - Quebec Ministry of Public Safety</option>
+                  <option value="CO">Colombia - UNGRD (National Unit for Disaster Risk Management)</option>
+                  <option value="HR">Croatia - State Hydrometeorological Institute (DHMZ)</option>
+                  <option value="CY">Cyprus - Meteorological Service</option>
+                  <option value="CZ">Czech Republic - Czech Hydrometeorological Institute</option>
+                  <option value="DK">Denmark - Danmarks Meteorologiske Instituts</option>
+                  <option value="EE">Estonia - State Weather Service</option>
+                  <option value="FM">Federated States of Micronesia - Weather Service Office Chuuk</option>
+                  <option value="FM">Federated States of Micronesia - Weather Service Office Pohnpei</option>
+                  <option value="FM">Federated States of Micronesia - Weather Service Office Yap</option>
+                  <option value="FI">Finland - Finnish Meteorological Institute</option>
+                  <option value="FR">France - Meteo-France</option>
+                  <option value="DE">Germany - German Meteorological Office</option>
+                  <option value="GR">Greece - Hellenic National Meteorological Service</option>
+                  <option value="GY">Guyana - Hydrometeorological Service</option>
+                  <option value="HU">Hungary - Hungarian Meteorological Service</option>
+                  <option value="IS">Iceland - Icelandic Meteorological Office</option>
+                  <option value="IN">India - Meteorological Department</option>
+                  <option value="ID">Indonesia - Agency for Meteorology Climatology and Geophysics of Republic Indonesia (BMKG)</option>
+                  <option value="ID">Indonesia - InaTEWS BMKG, Earthquake with magnitude 5.0 above</option>
+                  <option value="IE">Ireland - Met Eireann - Irish Meteorological Service</option>
+                  <option value="IL">Israel - Meteorological Service</option>
+                  <option value="IT">Italy - National Center of Meteorology and Aeronautical Climatology (CNMCA)</option>
+                  <option value="JM">Jamaica - Meteorological Service</option>
+                  <option value="KE">Kenya - Meteorological Department</option>
+                  <option value="KW">Kuwait - Meteorological Department</option>
+                  <option value="LV">Latvia - Latvian Environment, Geology and Meteorology Center</option>
+                  <option value="LT">Lithuania - Lithuanian Hydrometeorological Service</option>
+                  <option value="LU">Luxembourg - Luxembourg Airport Administration</option>
+                  <option value="MG">Madagascar - Operational Meteorology</option>
+                  <option value="MW">Malawi - Meteorological Services</option>
+                  <option value="MT">Malta - Meteorological Office</option>
+                  <option value="MH">Marshall Islands - Majuro Weather Service Office</option>
+                  <option value="MX">Mexico - CONAGUA - National Meteorological Service of Mexico</option>
+                  <option value="MD">Moldova - State Hydrometeorological Service</option>
+                  <option value="MN">Mongolia - National Agency for Meteorology and Environmental Monitoring</option>
+                  <option value="ME">Montenegro - Institute of Hydrometeorology and Seismology</option>
+                  <option value="MM">Myanmar - Department of Meteorology and Hydrology</option>
+                  <option value="NL">Netherlands - Royal Netherlands Meteorological Institute</option>
+                  <option value="NZ">New Zealand - GNS Science</option>
+                  <option value="NZ">New Zealand - MetService</option>
+                  <option value="NZ">New Zealand - National Emergency Management Agency</option>
+                  <option value="MK">North Macedonia - Republic Hydrometeorological Organization</option>
+                  <option value="NO">Norway - Norwegian Meteorological Institute</option>
+                  <option value="NO">Norway - Norwegian Water Resources and Energy Directorate</option>
+                  <option value="OM">Oman - Directorate General of Meteorology</option>
+                  <option value="PW">Palau - Weather Service Office</option>
+                  <option value="PG">Papua New Guinea - Papua New Guinea Meteorological Service</option>
+                  <option value="PY">Paraguay - Directorate of Meteorology and Hydrology</option>
+                  <option value="PH">Philippines - Philippine Atmospheric Geophysical and Astronomical Services Administration</option>
+                  <option value="PL">Poland - Institute of Meteorology and Water Management</option>
+                  <option value="PT">Portugal - Portuguese Institute of Sea and Atmosphere, I.P.</option>
+                  <option value="RO">Romania - National Meteorological Administration</option>
+                  <option value="RU">Russia - Russian Federal Service for Hydrometeorology and Environmental Monitoring</option>
+                  <option value="LC">Saint Lucia - Meteorological Services</option>
+                  <option value="VC">Saint Vincent and the Grenadines - Meteorological Services</option>
+                  <option value="WS">Samoa - Meteorology Division</option>
+                  <option value="SN">Senegal - National Agency of Civil Aviation and Meteorology</option>
+                  <option value="RS">Serbia - Republic Hydrometeorological Institute</option>
+                  <option value="SK">Slovakia - Slovak Hydrometeorological Institute</option>
+                  <option value="SI">Slovenia - National Meteorological Service</option>
+                  <option value="SB">Solomon Islands - Meteorological Service</option>
+                  <option value="ZA">South Africa - South Africa Weather Service</option>
+                  <option value="ES">Spain - Meteorology Statal Agency</option>
+                  <option value="SR">Suriname - Suriname Meteorological Service</option>
+                  <option value="SE">Sweden - Swedish Meteorological and Hydrological Institute</option>
+                  <option value="CH">Switzerland - MeteoSwiss, Bundesamt für Meteorologie und Klimatologie</option>
+                  <option value="TZ">Tanzania - Meteorological Authority</option>
+                  <option value="TH">Thailand - Thai Meteorological Department</option>
+                  <option value="TO">Tonga - Tonga Meteorological Service</option>
+                  <option value="TT">Trinidad and Tobago - Trinidad and Tobago Meteorological Service</option>
+                  <option value="GB">United Kingdom - Met Office</option>
+                  <option value="US">United States - Environmental Protection Agency (EPA), Air Quality Alerts</option>
+                  <option value="US">United States - Integrated Public Alert and Warning System (IPAWS)</option>
+                  <option value="US">United States - National Oceanic and Atmospheric Administration (NOAA), National Tsunami Warning Center</option>
+                  <option value="US">United States - National Oceanic and Atmospheric Administration (NOAA), National Weather Service</option>
+                  <option value="US">United States - National Oceanic and Atmospheric Administration (NOAA), National Weather Service - Marine Zones</option>
+                  <option value="US">United States - U.S. Geological Survey (USGS), Volcano Hazard Program</option>
+                  <option value="VU">Vanuatu - Meteorological Services</option>
+                  <option value="ZW">Zimbabwe</option>
+              </select>
+            </div>
+            <div class="mb-3">
+                <label for="cityname" class="form-label">City</label>
+                <input type="text" id="cityname" class="form-control" placeholder="Enter city name">
+            </div>
+            <div class="mb-3" id="state-div" style="display: none;">
+                <label for="state" class="form-label">State (only for US)</label>
+                <input type="text" id="state" class="form-control" placeholder="Enter state code (e.g., CA)">
+            </div>
+            <button onclick="openWeather()" class="btn btn-primary">Get Weather</button>
+        </div>
+        <div id="weather" class="card p-3"></div>
+    </div>
+    
+    <script>
+        document.getElementById('country').addEventListener('change', function() {
+            const stateDiv = document.getElementById('state-div');
+            if (this.value === 'US') {
+                stateDiv.style.display = 'block';
+            } else {
+                stateDiv.style.display = 'none';
+            }
+        });
+
+        function openWeather() {
+            const country = document.getElementById('country').value;
+            const city = document.getElementById('cityname').value;
+            const state = document.getElementById('state').value;
+
+            let query = `${city},${country}`;
+            if (country === 'US' && state) {
+                query = `${city},${state},${country}`;
+            }
+
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&APPID=d748cb2b1622fec5b5d396c4a8260f97`)
+            .then(res => res.json())
+            .then(data => {
+                const weatherDiv = document.getElementById('weather');
+                weatherDiv.innerHTML = `
+                    <h5>Weather in ${data.name}, ${data.sys.country}</h5>
+                    <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="${data.weather[0].description}" class="weather-icon">
+                    <p>Temperature: ${(data.main.temp - 273.15).toFixed(2)}°C</p>
+                    <p>Pressure: ${data.main.pressure} hPa</p>
+                    <p>Humidity: ${data.main.humidity}%</p>
+                    <p>Wind Speed: ${data.wind.speed} m/s</p>
+                    <p>Cloudiness: ${data.clouds.all}%</p>
+                    <p>Weather: ${data.weather[0].description}</p>
+                `;
+            })
+            .catch(error => console.error('Error fetching weather data:', error));
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
